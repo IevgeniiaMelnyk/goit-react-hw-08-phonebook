@@ -14,7 +14,7 @@ const PhoneBook = () => {
   return (
     <ManeBox>
       {loading && !error && <Spinner />}
-      <Section title="Add new contact">
+      <Section title="Phone Book">
         <ContactForm />
       </Section>
       <Section title="Contacts">

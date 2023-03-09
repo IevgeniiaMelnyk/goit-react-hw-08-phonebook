@@ -21,7 +21,7 @@ const handlePending = store => {
 const handleRejected = (store, { payload }) => {
   store.loading = false;
   store.error = payload;
-  NotificationManager.error(payload);
+  NotificationManager.error('Sorry... Something went wrong...');
 };
 
 const contactsSlice = createSlice({
