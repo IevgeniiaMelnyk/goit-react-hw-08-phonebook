@@ -19,12 +19,12 @@ const ContactForm = () => {
     onSubmit,
   });
 
-  const { name, phone } = state;
+  const { name, number } = state;
 
   return (
     <Form onSubmit={handleSubmit}>
       <TextField value={name} handleChange={handleChange} {...fields.name} />
-      <TextField value={phone} handleChange={handleChange} {...fields.phone} />
+      <TextField value={number} handleChange={handleChange} {...fields.number} />
       <ButtonSubmit type="submit">Add contact</ButtonSubmit>
     </Form>
   );

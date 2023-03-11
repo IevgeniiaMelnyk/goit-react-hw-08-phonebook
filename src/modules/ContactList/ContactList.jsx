@@ -20,12 +20,12 @@ const ContactList = () => {
     dispatch(fetchDeleteContact(id));
   };
 
-  const elements = contacts.map(({ id, name, phone }) => {
+  const elements = contacts.map(({ id, name, number }) => {
     return (
       <Item key={id}>
         <ContactItem
           name={name}
-          number={phone}
+          number={number}
           onDeleteContact={onDeleteContact}
           id={id}
         />

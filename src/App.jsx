@@ -25,8 +25,8 @@ export const App = () => {
             </Route>
           </Routes>
         </Suspense>
+        <NotificationContainer />
       </BrowserRouter>
-      <NotificationContainer />
     </>
   );
 };
