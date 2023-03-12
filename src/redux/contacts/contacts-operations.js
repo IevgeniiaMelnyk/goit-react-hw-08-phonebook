@@ -53,3 +53,15 @@ export const fetchAddContact = createAsyncThunk(
     },
   }
 );
+
+export const fetchEditContact = createAsyncThunk(
+  'contact/edit',
+  async (data, { rejectWithValue }) => {
+    try {
+      const result = await contactsApi.editContact(data);
+      return result;
+    } catch ({ response }) {
+      return rejectWithValue(response.data.message);
+    }
+  }
+);

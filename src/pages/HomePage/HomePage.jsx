@@ -1,18 +1,15 @@
-import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
-import { isUserLogin } from 'redux/auth/auth-selrctor';
+import Section from 'shared/components/Section/Section';
+import ColorBox from 'shared/components/ColorBox/ColorBox';
 
 const HomePage = () => {
-  const isLogin = useSelector(isUserLogin);
-
-  if (isLogin) {
-    return <Navigate to="contacts" />;
-  }
-  if (!isLogin) {
-    return <Navigate to="register" />;
-  }
-
-  return <></>;
+  return (
+    <Section title="Home Page">
+      <ColorBox
+        text="The Contact Book application uses a backend for user registration and login. After registration, the user can use the Contact Book.
+The application has the ability to add, delete, edit and find contacts by name."
+      />
+    </Section>
+  );
 };
 
 export default HomePage;

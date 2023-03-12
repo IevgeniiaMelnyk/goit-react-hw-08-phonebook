@@ -36,4 +36,8 @@ export const DeleteBtn = styled.button`
 export const BtnLogout = styled(BtnSubmit)`
   margin: 0;
   color: rgb(255, 224, 189);
+
+  &:hover {
+    background-color: #153e49;
+  }
 `;

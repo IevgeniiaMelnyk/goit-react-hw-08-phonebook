@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const NavBar = styled.nav`
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 20px;
   background-color: rgb(178, 16, 30);
 `;
@@ -39,8 +39,16 @@ export const User = styled.p`
 `;
 
 export const UserBar = styled.div`
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px; */
+`;
+
+export const UserBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
+  margin-bottom: 50px;
 `;

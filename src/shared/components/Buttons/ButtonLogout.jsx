@@ -14,5 +14,5 @@ export default ButtonLogout;
 ButtonLogout.propTypes = {
   children: PropTypes.elementType.isRequired,
   type: PropTypes.oneOf(['submit', 'button', 'reset']).isRequired,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };

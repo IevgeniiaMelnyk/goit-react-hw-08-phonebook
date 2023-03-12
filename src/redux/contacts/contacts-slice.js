@@ -5,6 +5,7 @@ import {
   fetchContacts,
   fetchDeleteContact,
   fetchAddContact,
+  fetchEditContact,
 } from './contacts-operations';
 
 const initialState = {
@@ -51,7 +52,17 @@ const contactsSlice = createSlice({
         store.loading = false;
         store.contacts = [payload, ...store.contacts];
       })
-      .addCase(fetchAddContact.rejected, handleRejected);
+      .addCase(fetchAddContact.rejected, handleRejected)
+      .addCase(fetchEditContact.pending, handlePending)
+      .addCase(fetchEditContact.fulfilled, (store, { payload }) => {
+        store.loading = false;
+        const newContacts = store.contacts.map(contact =>
+          contact.id === payload.id ? payload : contact
+        );
+
+        store.contacts = [...newContacts];
+      })
+      .addCase(fetchEditContact.rejected, handleRejected);
   },
 });
 
